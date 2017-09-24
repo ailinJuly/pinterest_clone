@@ -1,4 +1,6 @@
 class Pin < ApplicationRecord
+    validates :title,:description,:image,presence: true
+  
     belongs_to :user
     acts_as_votable
   	has_attached_file :image, :styles => { :medium => "300x300>" }
